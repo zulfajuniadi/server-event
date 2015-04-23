@@ -16,7 +16,7 @@ module.exports = function (options) {
 	var retry        = parseInt(options.retry, 10) || 3000;
 
 	if (options.express) {
-		fs.readFile('client.js', function (error, data) {
+		fs.readFile(__dirname + '/client.js', function (error, data) {
 			var clientJs;
 
 			if (error) {
